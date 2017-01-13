@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Manhattan Neighborhood</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+
+    <div class="header">
+        <div id="hamburger">
+            <a href="#" class="menu-icon" data-bind="click: toggleActive">
+                <img src="img/hamburger.png" alt="Icon">
+                <!-- image from: "http://www.flaticon.com -->
+            </a>
+        </div>
+
+        <div id="title">
+            <h1>Churches Near Rockefeller Center </h1>
+        </div>
+    </div>
+    <div class="filter-bar" data-bind="css: {'activeStyle': isActive}">
+        <input id="filter" type="search" placeholder="Filter for a Church listed below" data-bind="textInput: query">
+        <ul data-bind="foreach: search">
+            <li data-bind="text: title, click: $parent.animateMarker"></li>
+        </ul>
+    </div>
+    <div id="map"></div>
+
+    <script src="js/lib/jquery.min.js"></script>
+    <script src="js/lib/knockout-3.2.0.js"></script>
+    <script src="js/app3.js"></script>
+    <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCI2sFaDxZshfW8VkaxafQ5jpM5NegjnKM&libraries=geometry,drawing,places&v=3&callback=initMap" onerror="googleMapsApiErrorHandler()">
+    </script>
+</body>
+
+</html>
