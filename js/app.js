@@ -3,7 +3,7 @@ var bounds;
 var infoWindow;
 
 // Data Model
-var LocationsData = [{
+var Locations = [{
     title: "St. Patrick's Cathedral (Manhattan)",
     location: {
         lat: 40.7584653,
@@ -50,6 +50,18 @@ var LocationsData = [{
     location: {
         lat: 40.7492292,
         lng: -73.9814258
+    }
+}, {
+    title: "Christ Church United Methodist",
+    location: {
+        lat: 40.7637455,
+        lng: -73.9695996
+    }
+}, {
+    title: "St. Francis of Assisi Church (Manhattan)",
+    location: {
+        lat: 40.7488421,
+        lng: -73.9905706
     }
 }];
 
@@ -124,7 +136,7 @@ function initMap() {
 
 var ViewModel = function() {
     var self = this;
-    self.viewList = ko.observableArray(LocationsData);
+    self.viewList = ko.observableArray(Locations);
     self.query = ko.observable('');
 
     self.viewList().forEach(function(item) {
