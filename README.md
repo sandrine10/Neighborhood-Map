@@ -17,7 +17,7 @@ To run this application download all of the files and open the index.html file i
 ## Resources Used
 * Intro to Ajax
 * JavaScript Design Patterns
-* Google Maps ApIs
+* <a href="https://developers.google.com/maps/documentation/javascript/tutorial">Google Maps ApIs</a>
 * Wikipedia
 * Knockout.js
 * jQuery
